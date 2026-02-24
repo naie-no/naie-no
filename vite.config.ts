@@ -5,8 +5,8 @@ import { viteSourceLocator } from '@metagptx/vite-plugin-source-locator';
 import { atoms } from '@metagptx/web-sdk/plugins';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: "/",
+export default defineConfig(() => ({
+  base: "/naie-no/",
   plugins: [
     viteSourceLocator({
       prefix: 'mgx', // 前缀用于标识源代码位置，不能修改
