@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=./index.html" />
+    <script>
+      // Preserve the path in the URL so the app can restore it
+      const l = window.location;
+      const repo = l.pathname.split("/")[1]; // YOUR_REPO_NAME
+      const path = l.pathname.split("/").slice(2).join("/");
+      const search = l.search || "";
+      const hash = l.hash || "";
+      // store original path so app can read it (optional)
+      sessionStorage.redirect = "/" + path + search + hash;
+      l.replace("/" + repo + "/");
+    </script>
+  </head>
+  <body></body>
+</html>
