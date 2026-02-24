@@ -53,7 +53,12 @@ export default function Navigation() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const lang = useMemo(() => getLangFromPath(location.pathname), [location.pathname]);
+  const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ""); // "/naie-no" in prod, "" in dev
+  const pathAfterBase = location.pathname.startsWith(baseUrl)
+    ? location.pathname.slice(baseUrl.length) || "/"
+    : location.pathname;
+  
+  const lang = useMemo(() => getLangFromPath(pathAfterBase), [pathAfterBase]);
   const base = `/${lang}`;
 
   const currentPathNoLang = useMemo(() => {

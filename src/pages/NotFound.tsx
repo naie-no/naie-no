@@ -15,9 +15,7 @@ export default function NotFound() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild className="bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg">
-            <Link to="/">
-              <Home className="w-4 h-4 mr-2" /> Til forsiden
-            </Link>
+            <Link to="/">Til forsiden</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-lg border-[#5A23C9] text-[#5A23C9] hover:bg-[#ECE7FF] !bg-transparent">
             <Link to="#" onClick={() => window.history.back()}>
