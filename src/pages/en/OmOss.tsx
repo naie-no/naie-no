@@ -137,7 +137,7 @@ export default function OmOss() {
                 </div>
                 <div className="text-center md:text-right">
                   <Button asChild size="lg" className="bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg">
-                    <Link to="/kontakt">
+                    <Link to="/en/kontakt">
                       Contact us <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </Button>
