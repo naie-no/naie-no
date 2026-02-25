@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/naie_logo_v1_with_text_purple.svg";
 
 type Lang = "no" | "en";
 
@@ -129,17 +130,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to={base} className="flex items-center gap-2 shrink-0">
-            <div className="w-10 h-10 bg-gradient-to-br from-[#3D148A] to-[#5A23C9] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">NAIE</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-[#3D148A] font-bold text-lg leading-tight">
-                NAIE
-              </span>
-              <span className="block text-[10px] text-gray-500 leading-tight -mt-0.5">
-                Norsk AI-Etikkforening
-              </span>
-            </div>
+            <img
+			  src={logo}
+			  alt="NAIE logo"
+			  className="h-10 w-auto object-contain"
+			/>
           </Link>
 
           {/* Desktop Nav */}

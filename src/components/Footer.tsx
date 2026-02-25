@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/naie_logo_v1_white.svg";
 
 type Lang = "no" | "en";
 
@@ -47,7 +48,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-10">
           {/* Column 1 */}
           <div>
-            <h3 className="font-bold text-lg mb-4">NAIE</h3>
+			<img
+			  src={logo}
+			  alt="NAIE logo"
+			  className="h-10 w-auto mb-4 object-contain"
+			/>
             <p className="text-sm text-purple-200 leading-relaxed">
               {content.copyright}
             </p>
