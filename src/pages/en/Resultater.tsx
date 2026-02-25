@@ -499,7 +499,7 @@ export default function Resultater() {
               <p className="text-purple-200 mb-6">Contact us to learn more about how our findings can help your organization.</p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button asChild size="lg" className="bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg">
-                  <Link to="/for-organisasjoner">For organizations</Link>
+                  <Link to="/en/for-organisasjoner">For organizations</Link>
                 </Button>
                 <Button
                   asChild
@@ -507,7 +507,7 @@ export default function Resultater() {
                   size="lg"
                   className="border-white/30 text-white hover:bg-white/10 !bg-transparent rounded-lg"
                 >
-                  <Link to="/kontakt">Contact us</Link>
+                  <Link to="/en/kontakt">Contact us</Link>
                 </Button>
               </div>
             </CardContent>

@@ -201,13 +201,13 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg px-6">
-                <Link to="/resultater">
+                <Link to="/en/resultater">
                   View results
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 !bg-transparent rounded-lg px-6">
-                <Link to="/om-oss">About us</Link>
+                <Link to="/en/om-oss">About us</Link>
               </Button>
             </div>
           </div>
@@ -271,7 +271,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-10">
             <Button asChild size="lg" className="bg-[#5A23C9] hover:bg-[#3D148A] text-white font-semibold rounded-lg">
-              <Link to="/resultater">
+              <Link to="/en/resultater">
                 See what we’ve found <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
@@ -362,10 +362,10 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg">
-              <Link to="/resultater">View results</Link>
+              <Link to="/en/resultater">View results</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 !bg-transparent rounded-lg">
-              <Link to="/kontakt">Contact us</Link>
+              <Link to="/en/kontakt">Contact us</Link>
             </Button>
           </div>
         </div>
