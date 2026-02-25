@@ -8,6 +8,13 @@ export type BlogMeta = {
 
 export const BLOGS: BlogMeta[] = [
   {
+    slug: "maling-av-fordommer-i-ai-systemer-del-3",
+    title: "Måling av fordommer i AI-systemer ved bruk av norsk språk og kontekst, del 3",
+    date: "2026-02-11",
+    excerpt: "Hvorfor norske bias-målinger gir andre utslag enn engelske.",
+    file: () => import("./maling-av-fordommer-i-ai-systemer-del-3.md?raw"),
+  },
+  {
     slug: "seks-maneder-igjen-ai-act-artikkel-10",
     title: "Seks måneder igjen: betydningen av AI act artikkel 10 og hvorfor NAIE lanseres nå ",
     date: "2026-02-05",
