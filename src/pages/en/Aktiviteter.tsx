@@ -169,7 +169,7 @@ export default function Aktiviteter() {
           <h2 className="text-2xl font-bold text-[#3D148A] mb-4">Explore our results</h2>
           <p className="text-gray-600 mb-6">See what we have found through our research and analysis.</p>
           <Button asChild size="lg" className="bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg">
-            <Link to="/resultater">
+            <Link to="/en/resultater">
               View results <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </Button>
@@ -201,7 +201,7 @@ function OverviewPage() {
             {pillarList.map((key) => {
               const act = activities[key] as typeof activities.bias;
               return (
-                <Link key={key} to={`/no/aktiviteter/${key}`} className="group">
+                <Link key={key} to={`/en/aktiviteter/${key}`} className="group">
                   <Card className="h-full border-0 shadow-md hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
                     <div className="h-52 overflow-hidden">
                       <img
