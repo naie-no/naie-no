@@ -201,7 +201,7 @@ function OverviewPage() {
             {pillarList.map((key) => {
               const act = activities[key] as typeof activities.bias;
               return (
-                <Link key={key} to={`/aktiviteter/${key}`} className="group">
+                <Link key={key} to={`/no/aktiviteter/${key}`} className="group">
                   <Card className="h-full border-0 shadow-md hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2 overflow-hidden">
                     <div className="h-52 overflow-hidden">
                       <img

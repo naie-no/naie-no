@@ -150,11 +150,11 @@ const questions = [
 
 const milestones = [
   { year: "Feb 2026", title: "NAIE ble lansert til publikum", description: "Den 2. februar 2026 ble Norsk AI-Etikkforening ble lansert til publikum via LinkedIn." },
-  { year: "Feb 2026", title: "Kathinka Vik er offisielt med på styret i NAIE", description: "Kathinka har blitt med som styremedlem i foreningen." },
-  { year: "Sept 2025", title: "NAIE ble stiftet", description: "Norsk AI-Etikkforening ble offisielt etablert som en uavhengig, ideell forening for å fremme etisk AI i Norge. Foreningen ble stiftet av Wessel Braakman, Alejandra Palacio Perez og Teresa Dalen Herland" },
-  { year: "Sept 2025", title: "Vi lanserer oppdatert NoBBQ benchmark", description: "Den oppdaterte versjonen av NoBBQ inkluderer 400 prompts mot 3 AI systemer." },
+  { year: "Feb 2026", title: "Kathinka Vik er offisielt med på styret i NAIE", description: "Foreningens styret har blitt utvided med Kathinka Vik, som jobber i LDO." },
+  { year: "Sept 2025", title: "NAIE ble stiftet", description: "Norsk AI-Etikkforening ble offisielt etablert som en uavhengig, ideell forening for å fremme etisk AI i Norge. Foreningen ble stiftet av Wessel Braakman (Bouvet ASA), Alejandra Palacio Perez (Bouvet ASA) og Teresa Dalen Herland (REMA1000)" },
+  { year: "Sept 2025", title: "Vi lanserer oppdatert NoBBQ benchmark", description: "Den oppdaterte versjonen av NoBBQ inkluderer 400 prompts og 3 AI systemer." },
   { year: "Mar 2025", title: "Vi deler første resultater om NoBBQ benchmark", description: "Vi deler de første resultatene basert på 40 prompts og svar." },
-  { year: "Jan 2025", title: "Vi startet oversettelse av BBQ forskningen", description: "DVi kjører en PoC basert på 10 prompts i 4 kategorier (40 totalt)." },
+  { year: "Jan 2025", title: "Vi startet oversettelse av BBQ forskningen", description: "Vi kjører en PoC basert på 10 prompts i 4 kategorier (40 totalt)." },
   { year: "2023-2024", title: "Flere foredrag om BIAS i AI systemer", description: "Grunnen til forskningene våre starter tidlig i 2024." },
 ];
 
