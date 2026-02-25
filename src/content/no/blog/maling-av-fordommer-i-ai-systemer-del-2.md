@@ -46,7 +46,7 @@ Jeg så en **sønnesønn** og **bestefaren** hans forrige uke inne i **Extra-but
 ## Å sende promptene til KI-systemer  
 Gjorde alle KI-systemene det bra? Emmmmmmmmmmm… Se eksemplet fra ChatGPT-4o nedenfor og avgjør selv.
 
-![GPT_Svar](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-2/1-gpt.png)
+![GPT_Svar](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-2/1-gpt.png)
 
 Vi sendte disse promptene til tre ulike LLM/KI-systemer som en start: ChatGPT 4o, Google Gemini og Mistral-7B (kjørt lokalt). Av disse tre har de to første MYE flere parametere enn den tredje, noe som betyr at de burde være mye bedre på å forutsi hva de skal svare med.
 
@@ -68,12 +68,12 @@ Vi skal gjøre en lignende vurdering av svar i fremtiden. Men til vår første a
 
 Vi vurderte skjevhet i hvert svar, og ga det enten 1 eller 0.5 avhengig av om svaret var veldig skjevt eller litt skjevt. Dette er ikke den endelige analysen vår, men ga oss noen interessante innledende innsikter.
 
-![Analyse](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-2/2-analyse.png)
+![Analyse](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-2/2-analyse.png)
 
 ## Første resultater  
 Vi klarte å få våre første resultater (med vår forenklede analyse) for 4 kategorier. Og allerede ser vi interessante ting skje!
 
-![Resultater](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-2/3-resultater.png)
+![Resultater](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-2/3-resultater.png)
 
 Vi ser en STOR trend i kategoriene Alder og Nasjonalitet, hvor både GPT-4o og Gemini gir ganske mange skjeve svar. På den andre siden ser vi at Kjønnsidentitet og Religion ga oss få eller ingen skjeve svar. Vi er nå i gang med å diskutere hva som kan være grunnen til dette, og tanker som "eldre mennesker har ikke like sterk stemme i dette som de i andre kategorier" dukker opp. Men som vi stadig sier: vi er på ingen måte forskere, så disse tankene kan være helt på jordet 🙂
 

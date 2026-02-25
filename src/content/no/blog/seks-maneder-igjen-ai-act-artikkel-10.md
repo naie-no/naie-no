@@ -7,8 +7,8 @@ Blant de mange bestemmelsene finner vi artikkel 10, som krever identifisering av
 
 ## Artikkel 10: KI-etikk fra teori til praksis
 
-![Artikkel 10](/naie-no/public/blog/seks-maneder-igjen-ai-act-artikkel-10/1-artikkel.png)
-![Artikkel 10](/naie-no/public/blog/seks-maneder-igjen-ai-act-artikkel-10/2-artikkel.png)
+![Artikkel 10](/naie-no/blog/seks-maneder-igjen-ai-act-artikkel-10/1-artikkel.png)
+![Artikkel 10](/naie-no/blog/seks-maneder-igjen-ai-act-artikkel-10/2-artikkel.png)
 
 [Artikkel 10 ](https://artificialintelligenceact.eu/article/10/) stiller krav til at datasett i slike KI-systemer er relevante og representative. Og dermed er ikke KI-etikk lenger en frivillig øvelse. For mange organisasjoner vil artikkel 10 by på operative utfordringer, hvor det blant annet må avklares:
 
@@ -32,11 +32,11 @@ Bremseklossene for en slik gjennomgang trenger ikke dreie seg om manglende vilje
 
 ## Formålet med NAIE
 
-![Artikkel 10](/naie-no/public/blog/seks-maneder-igjen-ai-act-artikkel-10/3-blog.png)
+![Artikkel 10](/naie-no/blog/seks-maneder-igjen-ai-act-artikkel-10/3-blog.png)
 
 Norsk AI-Etikkforening har allerede erfaring med testing av skjevhet i språkmodeller, med fokus på norsk språk og kultur. Vi er åpne om våre metoder og tilgjengeliggjør våre funn løpende, blant annet i en blogg med analyser basert på et større datasett.
 
-![Artikkel 10](/naie-no/public/blog/seks-maneder-igjen-ai-act-artikkel-10/4-blog.png)
+![Artikkel 10](/naie-no/blog/seks-maneder-igjen-ai-act-artikkel-10/4-blog.png)
 
 NAIE er opprettet for å videreføre vårt allerede pågående arbeid på en mer transparent og strukturert måte. Vi sitter ikke med en fasit, men vi deler åpent våre erfaringer med å måle skjevheter i KI-systemer.
 

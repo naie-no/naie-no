@@ -19,7 +19,7 @@ kategorier, noe som resulterte i **40 oversatte og tilpassede spørsmål**. Det 
 
 De siste månedene har vi manuelt utvidet datasettet til rundt 100 prompts innenfor disse fire kategoriene, noe som gir oss **mer enn 400 prompts totalt**.
 
-![Progress](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-3/1-progress.png)
+![Progress](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-3/1-progress.png)
 
 Denne økningen har gjort det mulig å utforske dimensjonen av fordommer innenfor kategorier som kjønn, alder og nasjonalitet, gjennom et langt bredere spekter av formuleringer, tone og kontekst.
 
@@ -31,7 +31,7 @@ Denne utvidelsen er også et steg på veien mot neste mål: et omfattende datase
 
 I del 2 fokuserte vi hovedsakelig på prosess, hvordan gå fra kontekst ogspørsmål til ferdig prompt, hvordan sende dem inn og hvordan evaluere svarene. Som i del 2 kjørte vi det utvidede datasettet mot **ChatGPT**, **Gemini** og **Perplexity**, tre modeller med ulike bakgrunner, treningsdata og designvalg.
 
-![LLM](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-3/2-llm.png
+![LLM](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-3/2-llm.png
 
 Noen modeller falt ofte tilbake på svært forsiktige svar som «det kan ikke avgjøres», mens andre var mer bastante og til tider tydelig mindre nøytrale. Vi la også merke til at norske spørsmål ikke alltid ga like tydelige svar, spesielt når promptet bygget på subtile sosiale eller kulturelle signaler fremfor eksplisitt informasjon.
 
@@ -46,8 +46,8 @@ Vi brukte en hybrid tilnærming:
 -   **Automatisert scoring**, der skript mapper svarene til forhåndsdefinerte alternativer, ans0, ans1, ans2.
 -   **Manuell scoring** for svar som var tvetydige, indirekte eller sterkt kontekstavhengige.
 
-![Scoring](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-3/3-scoring.png)
-![Scoring](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-3/4-scoring.png)
+![Scoring](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-3/3-scoring.png)
+![Scoring](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-3/4-scoring.png)
 
 **Automatiseringen** gjorde det mulig å **håndtere omfanget av datasettet**, mens **manuell gjennomgang** sikret at **språklige nyanser og norske særtrekk ikke ble jevnet ut eller feiltolket**. Kombinasjonen ga oss et klarere bilde av overordnede trender, for eksempel når modeller systematisk heller mot nøytralitet eller konsekvent knytter bestemte demografiske trekk til bestemte utfall.
 
@@ -63,7 +63,7 @@ Disse utvekslingene er viktige for oss. De bidrar til at arbeidet både er metod
 
 ## Foreløpige resultater
 
-![Graph](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-3/5-graph.png)
+![Graph](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-3/5-graph.png)
 \% Skjevhetsavvik per kategori per LLM\
 Kilde: NoBBQ metode, populasjon ≅ 100 prompts, 2025-09-07
 
@@ -82,7 +82,7 @@ Våre hovedprioriteringer er:
 -   Å **utvide datasettet** videre mot rundt 3 000 prompts for hvert av våre fire opprinnelige skjevhetskategorier, for å bedre gjenspeile bredden av situasjoner AI-systemer møter.\
 -   Å **automatisere mer av prosessen**, fra generering av prompter basert på maler, til håndtering av prompter, modellforespørsler og evaluering, slik at NoBBQ blir repeterbar og bærekraftig over tid.
 
-![Plan](/naie-no/public/blog/maling-av-fordommer-i-ai-systemer-del-3/6-plan.png)
+![Plan](/naie-no/blog/maling-av-fordommer-i-ai-systemer-del-3/6-plan.png)
 
 Målet er å **bevege oss bort fra enkeltstående evalueringer** og over mot **kontinuerlig overvåking**. Det vil gjøre oss i stand til å følge endringer på tvers av modellversjoner, sammenligne systemer over tid og se om nye versjoner faktisk forbedrer eller forverrer skjevhetsrelatert atferd.
 
