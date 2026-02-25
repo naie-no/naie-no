@@ -5,7 +5,13 @@ import { Button } from "@/components/ui/button";
 
 type Lang = "no" | "en";
 
-const navItems = [
+type NavItem = {
+  label: string;
+  path: string;
+  children?: { label: string; path: string }[];
+};
+
+const navItemsNo: NavItem[] = [
   { label: "Hjem", path: "/" },
   { label: "Om oss", path: "/om-oss" },
   {
@@ -32,6 +38,33 @@ const navItems = [
   { label: "Kontakt", path: "/kontakt" },
 ];
 
+const navItemsEn: NavItem[] = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/om-oss" },
+  {
+    label: "Activities",
+    path: "/aktiviteter",
+    children: [
+      { label: "Bias", path: "/aktiviteter/bias" },
+      { label: "Responsible AI", path: "/aktiviteter/ansvarlig-ai" },
+      { label: "Sustainability", path: "/aktiviteter/baerekraft" },
+    ],
+  },
+  {
+    label: "Insights",
+    path: "/resultater",
+    children: [
+      { label: "Results", path: "/resultater" },
+      { label: "Blog", path: "/blogg" },
+      { label: "Resources", path: "/ressurser" },
+      { label: "News", path: "/nyheter" },
+      { label: "Press & Events", path: "/presse-og-arrangementer" },
+    ],
+  },
+  { label: "For organisations", path: "/for-organisasjoner" },
+  { label: "Contact", path: "/kontakt" },
+];
+
 function getLangFromPath(pathname: string): Lang {
   const first = pathname.split("/")[1];
   return first === "en" ? "en" : "no";
@@ -53,25 +86,27 @@ export default function Navigation() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, ""); // "/naie-no" in prod, "" in dev
-  const pathAfterBase = location.pathname.startsWith(baseUrl)
-    ? location.pathname.slice(baseUrl.length) || "/"
-    : location.pathname;
-  
-  const lang = useMemo(() => getLangFromPath(pathAfterBase), [pathAfterBase]);
+  // IMPORTANT: Because App.tsx uses <BrowserRouter basename={import.meta.env.BASE_URL}>,
+  // we MUST NOT manually prepend BASE_URL (e.g. "/naie-no") anywhere.
+  const pathname = location.pathname;
+
+  const lang = useMemo(() => getLangFromPath(pathname), [pathname]);
   const base = `/${lang}`;
+
+  const items = useMemo(() => (lang === "en" ? navItemsEn : navItemsNo), [lang]);
 
   const currentPathNoLang = useMemo(() => {
     // "/no/kontakt" -> "/kontakt"
     // "/no" -> "/"
-    const parts = location.pathname.split("/");
+    const parts = pathname.split("/");
     const maybeLang = parts[1];
+
     if (maybeLang === "no" || maybeLang === "en") {
       const rest = "/" + parts.slice(2).join("/");
       return rest === "/" ? "/" : rest.replace(/\/$/, "") || "/";
     }
-    return location.pathname;
-  }, [location.pathname]);
+    return pathname;
+  }, [pathname]);
 
   const isActive = (rawPath: string) => {
     // Compare against current path WITHOUT language prefix
@@ -83,8 +118,8 @@ export default function Navigation() {
     children?.some((c) => isActive(c.path)) ?? false;
 
   const switchLang = (next: Lang) => {
-    // Replace /no or /en at the start of the path
-    const newPath = location.pathname.replace(/^\/(no|en)(\/|$)/, `/${next}$2`);
+    // Replace /no or /en at the start of the path (Router basename is handled by BrowserRouter)
+    const newPath = pathname.replace(/^\/(no|en)(\/|$)/, `/${next}$2`);
     navigate(newPath);
   };
 
@@ -98,7 +133,9 @@ export default function Navigation() {
               <span className="text-white font-bold text-sm">NAIE</span>
             </div>
             <div className="hidden sm:block">
-              <span className="text-[#3D148A] font-bold text-lg leading-tight">NAIE</span>
+              <span className="text-[#3D148A] font-bold text-lg leading-tight">
+                NAIE
+              </span>
               <span className="block text-[10px] text-gray-500 leading-tight -mt-0.5">
                 Norsk AI-Etikkforening
               </span>
@@ -107,7 +144,7 @@ export default function Navigation() {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) =>
+            {items.map((item) =>
               item.children ? (
                 <div
                   key={item.label}
@@ -125,6 +162,7 @@ export default function Navigation() {
                     {item.label}
                     <ChevronDown className="w-3 h-3" />
                   </button>
+
                   {activeDropdown === item.label && (
                     <div className="absolute top-full left-0 mt-0 w-52 bg-white rounded-lg shadow-lg border border-gray-100 py-1 animate-in fade-in slide-in-from-top-2 duration-200">
                       {item.children.map((child) => (
@@ -203,7 +241,7 @@ export default function Navigation() {
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg animate-in slide-in-from-top-2 duration-200">
           <div className="px-4 py-3 space-y-1 max-h-[70vh] overflow-y-auto">
-            {navItems.map((item) => (
+            {items.map((item) => (
               <div key={item.label}>
                 {item.children ? (
                   <>

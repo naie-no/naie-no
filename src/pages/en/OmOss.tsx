@@ -8,26 +8,26 @@ import Footer from "@/components/Footer";
 const boardMembers = [
   {
     name: "Wessel Braakman",
-    role: "Styreleder",
-    description: "Leder NAIEs arbeid med å fremme etisk AI i Norge.",
+    role: "Chair",
+    description: "Leads NAIE’s work to promote ethical AI in Norway.",
     image: "wessel-braakman.png"
   },
   {
     name: "Alejandra Palacio Perez",
-    role: "Nestleder",
-    description: "Leder NAIEs arbeid med å fremme etisk AI i Norge.",
+    role: "Vice Chair",
+    description: "Leads NAIE’s work to promote ethical AI in Norway.",
     image: "alejandra-palacio-perez.png"
   },
   {
     name: "Teresa Dalen Herland",
-    role: "Styremedlem",
-    description: "Bidrar med innsikt innen AI-forskning og bias-analyse.",
+    role: "Board Member",
+    description: "Contributes insight in AI research and bias analysis.",
     image: "teresa-dalen-herland.png"
   },
   {
     name: "Kathinka Theodore Aakenes Vik",
-    role: "Styremedlem",
-    description: "Bidrar med innsikt innen AI-forskning og bias-analyse.",
+    role: "Board Member",
+    description: "Contributes insight in AI research and bias analysis.",
     image: "kathinka-theodore-aakenes-vik.png"
   }
 ];
@@ -41,9 +41,9 @@ export default function OmOss() {
       <section className="bg-gradient-to-br from-[#3D148A] to-[#5A23C9] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Om oss</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">About us</h1>
             <p className="text-lg text-purple-200 leading-relaxed">
-              NAIE (Norsk AI-Etikkforening) er en uavhengig, ideell forening som arbeider for etisk og ansvarlig bruk av kunstig intelligens i Norge.
+              NAIE (Norwegian AI Ethics Association) is an independent, non-profit organization working to promote the ethical and responsible use of artificial intelligence in Norway.
             </p>
           </div>
         </div>
@@ -54,24 +54,24 @@ export default function OmOss() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-[#3D148A] mb-6">Vår misjon</h2>
+              <h2 className="text-3xl font-bold text-[#3D148A] mb-6">Our mission</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  NAIE ble grunnlagt med en visjon om å gjøre AI mer rettferdig, transparent og bærekraftig. Vi tror at kunstig intelligens har enormt potensial til å forbedre samfunnet, men bare hvis den utvikles og brukes på en ansvarlig måte.
+                  NAIE was founded with a vision to make AI more fair, transparent, and sustainable. We believe that artificial intelligence has enormous potential to improve society, but only if it is developed and used responsibly.
                 </p>
                 <p>
-                  Vi leverer statistikk og innsikt om tre hovedområder: Bias i AI-systemer, Ansvarlig AI-utvikling, og Bærekraft i AI-teknologi. Gjennom forskning, benchmarking og samarbeid med organisasjoner bidrar vi til en mer etisk AI-fremtid.
+                  We provide statistics and insights in three main areas: Bias in AI systems, Responsible AI development, and Sustainability in AI technology. Through research, benchmarking, and collaboration with organizations, we contribute to a more ethical AI future.
                 </p>
                 <p>
-                  NAIE samarbeider med Likestillings- og diskrimineringsombudet (LDO) og andre viktige aktører for å sikre at AI-systemer som brukes i Norge er rettferdige og ikke-diskriminerende.
+                  NAIE collaborates with the Equality and Anti-Discrimination Ombud (LDO) and other key stakeholders to ensure that AI systems used in Norway are fair and non-discriminatory.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-6">
               {[
-                { icon: Target, title: "Visjon", desc: "En fremtid der AI er rettferdig, transparent og bærekraftig for alle." },
-                { icon: Handshake, title: "Samarbeid", desc: "Vi jobber tett med LDO, forskningsinstitusjoner og næringsliv." },
-                { icon: Users, title: "Fellesskap", desc: "Vi bygger et nettverk av eksperter og engasjerte aktører innen AI-etikk." },
+                { icon: Target, title: "Vision", desc: "A future where AI is fair, transparent, and sustainable for everyone." },
+                { icon: Handshake, title: "Collaboration", desc: "We work closely with LDO, research institutions, and industry." },
+                { icon: Users, title: "Community", desc: "We build a network of experts and engaged stakeholders within AI ethics." },
               ].map((item) => (
                 <Card key={item.title} className="border-0 shadow-md hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 flex items-start gap-4">
@@ -94,9 +94,9 @@ export default function OmOss() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#3D148A] mb-4">Styret</h2>
+            <h2 className="text-3xl font-bold text-[#3D148A] mb-4">Board</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              NAIEs styre består av engasjerte fagpersoner med ekspertise innen AI, etikk og teknologi.
+              NAIE’s board consists of engaged professionals with expertise in AI, ethics, and technology.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -104,12 +104,12 @@ export default function OmOss() {
               <Card key={member.name} className="border-0 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
                 <CardContent className="p-8 text-center">
                   <div className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
-				    <img
-				    src={`${import.meta.env.BASE_URL}board/${member.image}`}
-				    alt={member.name}
-				    className="w-full h-full object-cover"
-				    />
-				  </div>
+                    <img
+                      src={`${import.meta.env.BASE_URL}board/${member.image}`}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <h3 className="text-lg font-bold text-[#3D148A]">{member.name}</h3>
                   <p className="text-[#FF7A1A] text-sm font-medium mt-1">{member.role}</p>
                   <p className="text-gray-600 text-sm mt-3">{member.description}</p>
@@ -127,18 +127,18 @@ export default function OmOss() {
             <CardContent className="p-10 md:p-14">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold mb-4">Organisasjonsinformasjon</h2>
+                  <h2 className="text-3xl font-bold mb-4">Organization information</h2>
                   <ul className="space-y-3 text-purple-200">
-                    <li><span className="text-white font-medium">Navn:</span> Norsk AI-Etikkforening (NAIE)</li>
-                    <li><span className="text-white font-medium">Type:</span> Uavhengig, ideell forening</li>
-                    <li><span className="text-white font-medium">Org.nr:</span> 932 552 728</li>
-                    <li><span className="text-white font-medium">Lisens:</span> CC BY 4.0</li>
+                    <li><span className="text-white font-medium">Name:</span> Norwegian AI Ethics Association (NAIE)</li>
+                    <li><span className="text-white font-medium">Type:</span> Independent, non-profit organization</li>
+                    <li><span className="text-white font-medium">Org. no.:</span> 932 552 728</li>
+                    <li><span className="text-white font-medium">License:</span> CC BY 4.0</li>
                   </ul>
                 </div>
                 <div className="text-center md:text-right">
                   <Button asChild size="lg" className="bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg">
                     <Link to="/kontakt">
-                      Kontakt oss <ArrowRight className="ml-2 w-4 h-4" />
+                      Contact us <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </Button>
                 </div>
