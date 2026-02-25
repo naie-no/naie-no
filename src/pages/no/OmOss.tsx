@@ -34,7 +34,7 @@ const boardMembers = [
 
 export default function OmOss() {
   return (
-    <div className="min-h-screen bg-[#F6F6F6]" style={{ fontFamily: "Inter, sans-serif" }}>
+    <div className="min-h-screen bg-[#F6F6F6] overflow-x-hidden" style={{ fontFamily: "Inter, sans-serif" }}>
       <Navigation />
 
       {/* Hero */}
@@ -99,15 +99,15 @@ export default function OmOss() {
               NAIEs styre består av engasjerte fagpersoner med ekspertise innen AI, etikk og teknologi.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {boardMembers.map((member) => (
               <Card key={member.name} className="border-0 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
                 <CardContent className="p-8 text-center">
-                  <div className="w-50 h-50 mx-auto mb-4">
+                  <div className="w-40 h-40 mx-auto mb-4 rounded-full overflow-hidden">
 				    <img
-				  	src={`/board/${member.image}`}
-				  	alt={member.name}
-				  	className="w-full h-full object-cover rounded-full"
+				    src={`${import.meta.env.BASE_URL}board/${member.image}`}
+				    alt={member.name}
+				    className="w-full h-full object-cover"
 				    />
 				  </div>
                   <h3 className="text-lg font-bold text-[#3D148A]">{member.name}</h3>
