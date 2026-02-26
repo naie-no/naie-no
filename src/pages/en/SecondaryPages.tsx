@@ -168,29 +168,40 @@ export function News() {
 
 /* ===================== PRESS & EVENTS ===================== */
 export function PressAndArrangements() {
-  const pressItems = [
-    {
-      type: "Event",
-      icon: Calendar,
-      title: "EuroSTAR 2026",
-      description:
-        "NAIE plans to share NoBBQ learnings and results at major European events.",
-    },
-    {
-      type: "Press",
-      icon: Mic,
-      title: "Podcast: Bias in AI systems",
-      description:
-        "Talks and interviews about bias measurement and Norwegian context.",
-    },
-    {
-      type: "Event",
-      icon: Calendar,
-      title: "ODIN (Oslo) testing conference",
-      description:
-        "NAIE participates in relevant Norwegian testing and tech communities.",
-    },
-  ];
+const pressItems = [
+  {
+    type: "Event",
+    icon: Calendar,
+    title: "June 2026 - EuroSTAR",
+    description:
+      "We share our latest NoBBQ learnings and results at a major European testing conference.",
+    link: "https://conference.eurostarsoftwaretesting.com/event/2026/can-we-measure-local-bias-in-ai-systems/",
+  },
+  {
+    type: "Press",
+    icon: Mic,
+    title: "January 2026 - Podcast: Bias in AI systems",
+    description:
+      "Wessel and Kathinka discuss bias in AI systems with Simen Sommerfeldt from Bouvet.",
+    link: "https://www.bouvet.no/podcasts/fordommer-i-ai",
+  },
+  {
+    type: "Event",
+    icon: Calendar,
+    title: "September 2025 - GoForIt: KI i offentlig sektor conference",
+    description:
+      "We present our findings at the GoForIt conference.",
+    link: "https://tankesmiengoforit.no/event/program-ki-i-offentlig-sektor-2025/",
+  },
+  {
+    type: "Event",
+    icon: Calendar,
+    title: "September 2025 - ODIN (Oslo) testing conference",
+    description:
+      "We share our latest findings at Norways biggest testing community.",
+    link: "https://event.checkin.no/104532/testkonferansen-odin-2025",
+  },
+];
 
   return (
     <PageWrapper
@@ -200,31 +211,49 @@ export function PressAndArrangements() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
-            {pressItems.map((item, i) => (
-              <Card
-                key={i}
-                className="border-0 shadow-md hover:shadow-lg transition-shadow"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#ECE7FF] rounded-lg flex items-center justify-center shrink-0">
-                      <item.icon className="w-6 h-6 text-[#5A23C9]" />
-                    </div>
-                    <div>
-                      <span className="text-xs font-semibold text-[#FF7A1A] uppercase tracking-wider">
-                        {item.type}
-                      </span>
-                      <h3 className="text-lg font-bold text-[#3D148A] mt-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mt-2 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {pressItems.map((item, i) => {
+			  const isExternal = item.link.startsWith("http");
+
+			  const Wrapper = isExternal ? "a" : Link;
+			  const wrapperProps = isExternal
+				? {
+					href: item.link,
+					target: "_blank",
+					rel: "noopener noreferrer",
+				  }
+				: {
+					to: item.link,
+				  };
+
+			  return (
+				<Wrapper
+				  key={i}
+				  {...wrapperProps}
+				  className="block group"
+				>
+				  <Card className="border-0 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 cursor-pointer">
+					<CardContent className="p-6">
+					  <div className="flex items-start gap-4">
+						<div className="w-12 h-12 bg-[#ECE7FF] rounded-lg flex items-center justify-center shrink-0 group-hover:bg-[#E0D8FF] transition-colors">
+						  <item.icon className="w-6 h-6 text-[#5A23C9]" />
+						</div>
+						<div>
+						  <span className="text-xs font-semibold text-[#FF7A1A] uppercase tracking-wider">
+							{item.type}
+						  </span>
+						  <h3 className="text-lg font-bold text-[#3D148A] mt-1 group-hover:text-[#5A23C9] transition-colors">
+							{item.title}
+						  </h3>
+						  <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+							{item.description}
+						  </p>
+						</div>
+					  </div>
+					</CardContent>
+				  </Card>
+				</Wrapper>
+			  );
+			})}
           </div>
         </div>
       </section>
