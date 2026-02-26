@@ -182,7 +182,7 @@ const pressItems = [
     icon: Mic,
     title: "January 2026 - Podcast: Bias in AI systems",
     description:
-      "Wessel and Kathinka discuss bias in AI systems with Simen Sommerfeldt from Bouvet.",
+      "Vi discuss bias in AI systems with Simen Sommerfeldt from Bouvet.",
     link: "https://www.bouvet.no/podcasts/fordommer-i-ai",
   },
   {

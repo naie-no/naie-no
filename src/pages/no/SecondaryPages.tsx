@@ -153,7 +153,7 @@ export function PresseOgArrangementer() {
       type: "Presse",
       icon: Mic,
       title: "Januar 2026 - Podcast Fordommer i AI systemer",
-      description: "Wessel og Kathinka snakker med Simen Sommerfeldt fra Bouvet om fordommer i AI systemer.",
+      description: "Vi snakker med Simen Sommerfeldt fra Bouvet om fordommer i AI systemer.",
       link: "https://www.bouvet.no/podcasts/fordommer-i-ai",
     },
     {
