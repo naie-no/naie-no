@@ -13,7 +13,7 @@ const pillars = [
       "Vi undersøker og måler bias i AI-systemer. Gjennom NoBBQ-benchmarken tester vi store språkmodeller for skjevheter knyttet til kjønn, etnisitet, religion og andre beskyttede kategorier.",
     icon: BarChart3,
     image: "https://mgx-backend-cdn.metadl.com/generate/images/974861/2026-02-17/2c507247-45cd-446a-a931-cc2cf506b4f8.png",
-    path: "/aktiviteter/bias",
+    path: "/no/aktiviteter/bias",
     color: "#5A23C9",
   },
   {
@@ -22,7 +22,7 @@ const pillars = [
       "Vi fremmer ansvarlig utvikling og bruk av kunstig intelligens i Norge. Vårt arbeid inkluderer retningslinjer, beste praksis og verktøy for etisk AI-implementering.",
     icon: Shield,
     image: "https://mgx-backend-cdn.metadl.com/generate/images/974861/2026-02-17/9162907a-6407-4f58-908a-72c3fb328131.png",
-    path: "/aktiviteter/ansvarlig-ai",
+    path: "/no/aktiviteter/ansvarlig-ai",
     color: "#FF7A1A",
   },
   {
@@ -31,7 +31,7 @@ const pillars = [
       "Vi undersøker miljøpåvirkningen av AI-systemer og arbeider for mer bærekraftig AI-utvikling. Vi måler og rapporterer om energiforbruk og karbonavtrykk.",
     icon: Leaf,
     image: "https://mgx-backend-cdn.metadl.com/generate/images/974861/2026-02-17/5dbf5d3e-295f-427b-86d9-cfecd9b430b2.png",
-    path: "/aktiviteter/baerekraft",
+    path: "/no/aktiviteter/baerekraft",
     color: "#10B981",
   },
 ];
