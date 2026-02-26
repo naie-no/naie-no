@@ -84,7 +84,7 @@ export default function OmOss() {
                 {
                   icon: Handshake,
                   title: "Samarbeid",
-                  desc: "Vi jobber tett med LDO, forskningsinstitusjoner og næringsliv.",
+                  desc: "Vi jobber tett med forskningsinstitusjoner og næringsliv.",
                 },
                 {
                   icon: Users,
