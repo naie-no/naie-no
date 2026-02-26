@@ -16,6 +16,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GitHubRepoCard from "@/components/GitHubRepoCard";
 
 /**
  * EN pages should link to /en/... to avoid jumping to /no/... by accident.
@@ -98,6 +99,9 @@ export function Resources() {
                 </CardContent>
               </Card>
             ))}
+          
+            {/* GitHub repo preview */}
+            <GitHubRepoCard owner="naie-no" repo="NoBBQ" />
           </div>
         </div>
       </section>

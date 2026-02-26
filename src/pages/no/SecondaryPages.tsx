@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GitHubRepoCard from "@/components/GitHubRepoCard";
 
 /* ===================== RESSURSER ===================== */
 export function Ressurser() {
@@ -42,21 +43,34 @@ export function Ressurser() {
   ];
 
   return (
-    <PageWrapper title="Ressurser" subtitle="Utforsk våre ressurser, rapporter og verktøy for etisk AI.">
+    <PageWrapper
+      title="Resources"
+      subtitle="Explore our resources, reports, and tools for ethical AI."
+    >
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
             {resources.map((res) => (
-              <Card key={res.title} className="border-0 shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+              <Card
+                key={res.title}
+                className="border-0 shadow-md hover:shadow-lg transition-all hover:-translate-y-1"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-[#ECE7FF] rounded-lg flex items-center justify-center shrink-0">
                       <res.icon className="w-6 h-6 text-[#5A23C9]" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-[#3D148A] mb-1">{res.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed mb-3">{res.description}</p>
-                      <Link to={res.link} className="text-[#FF7A1A] text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">
+                      <h3 className="text-lg font-bold text-[#3D148A] mb-1">
+                        {res.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                        {res.description}
+                      </p>
+                      <Link
+                        to={res.link}
+                        className="text-[#FF7A1A] text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all"
+                      >
                         {res.linkText} <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
@@ -64,6 +78,9 @@ export function Ressurser() {
                 </CardContent>
               </Card>
             ))}
+          
+            {/* GitHub repo preview */}
+            <GitHubRepoCard owner="naie-no" repo="NoBBQ" />
           </div>
         </div>
       </section>
