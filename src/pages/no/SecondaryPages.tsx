@@ -16,21 +16,21 @@ export function Ressurser() {
       icon: FileText,
       title: "NoBBQ Benchmark",
       description: "Vår benchmark for å måle bias i store språkmodeller på norsk. Tilgjengelig som åpen kildekode.",
-      link: "/aktiviteter/bias",
+      link: "/no/aktiviteter/bias",
       linkText: "Les mer",
     },
     {
       icon: BookOpen,
       title: "Rapporter og publikasjoner",
       description: "Forskningsrapporter, analyser og publikasjoner fra NAIEs arbeid med AI-etikk.",
-      link: "/resultater",
+      link: "/no/resultater",
       linkText: "Se resultater",
     },
     {
       icon: Video,
       title: "Presentasjoner",
       description: "Opptak og materiale fra konferanser, webinarer og foredrag om AI-etikk.",
-      link: "/presse-og-arrangementer",
+      link: "/no/presse-og-arrangementer",
       linkText: "Se arrangementer",
     },
     {
@@ -44,8 +44,8 @@ export function Ressurser() {
 
   return (
     <PageWrapper
-      title="Resources"
-      subtitle="Explore our resources, reports, and tools for ethical AI."
+      title="Ressurser"
+      subtitle="Utforsk våre ressurser, rapporter og verktøy for etisk AI."
     >
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
