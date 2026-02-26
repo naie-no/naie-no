@@ -123,7 +123,7 @@ export default function Aktiviteter() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#3D148A]/90 to-[#3D148A]/60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button asChild variant="ghost" className="text-purple-200 hover:text-white !bg-transparent mb-4 -ml-3">
-            <Link to="/aktiviteter">
+            <Link to="/en/aktiviteter">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to activities
             </Link>
           </Button>
