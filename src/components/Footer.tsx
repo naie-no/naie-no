@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/naie_logo_v1_orange.svg";
+import logo from "@/assets/naie_logo_v1_white.svg";
 
 type Lang = "no" | "en";
 
