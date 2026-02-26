@@ -464,7 +464,7 @@ export default function Resultater() {
                 </p>
               </div>
               <Button asChild className="mt-6 bg-[#FF7A1A] hover:bg-[#E85E00] text-white font-semibold rounded-lg">
-                <Link to="/no/aktiviteter/bias">
+                <Link to="/en/aktiviteter/bias">
                   Read more about our bias work <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
