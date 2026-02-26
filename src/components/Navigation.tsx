@@ -205,7 +205,7 @@ export default function Navigation() {
                 }`}
               >
                 <span className="text-base leading-none">🇳🇴</span>
-                <span className="hidden sm:inline">NO</span>
+                <span className="hidden sm:inline">NB</span>
               </button>
               <button
                 onClick={() => switchLang("en")}
